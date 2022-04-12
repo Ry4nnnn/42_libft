@@ -10,7 +10,7 @@ RM	= rm -rf
 CFLAGS	= -Wall -Werror -Wextra
 
 .c.o:
-			${CC} ${CFLAGS} -c $< -o ${$<:.c.o}
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 all:		${OBJS}
 			ar rc ${NAME} ${OBJS}
@@ -20,3 +20,7 @@ clean:
 
 fclean:		clean
 			${RM} ${NAME}
+
+re:			fclean all
+
+.PHONY:		all clean re

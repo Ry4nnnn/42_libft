@@ -21,4 +21,4 @@ int	ft_atoi(const char *str)
 		*str++;
 	}
 	return (result * sign);
-}
+}∏
