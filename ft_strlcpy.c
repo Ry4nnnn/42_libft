@@ -2,22 +2,19 @@
 
 size_t	ft_strlcpy(char	*dst, const char	*src, size_t	dstsize)
 {
-	size_t x;
-	size_t y;
+	size_t srclen;
+	size_t i;
 	
-	x = 0;
-	if (!src)
-		return (0);
-	while (src[x])
-		x++;
-	if (!dstsize)
-		return (x);
-	y = 0;
-	while (src[y] && y < dstsize - 1)
+	srclen = ft_strlen(src);
+	i = 0;
+	if (dstsize > 0)
 	{
-		dst[y] = src[y];
-		y++;
+		while (src[i] != '\0' && i < (dstsize - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[y] = '\0';
-	return (dstsize);
+	return (srclen);
 }
