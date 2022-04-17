@@ -6,29 +6,40 @@ SRCS	= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-OBJS	= ${SRCS:.c=.o}
+SRCS_BONUS =	./ft_lstnew.c ./ft_lstadd_front.c ./ft_lstsize.c \
+				./ft_lstlast.c ./ft_lstadd_back.c ./ft_lstdelone.c \
+				./ft_lstclear.c ./ft_lstiter.c ./ft_lstmap.c
 
-BONUS	= 
+OBJS = ${SRCS:.c=.o}
 
-NAME	= libft.a
+OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 
-CC	= gcc
-RM	= rm -rf
+NAME = libft.a
+
+CC = gcc
 
 CFLAGS	= -Wall -Werror -Wextra
 
-.c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+$(NAME) : ${OBJS}
+		@echo "Making library..."
+		@ar rcs ${NAME} ${OBJS}
 
-all:		${OBJS}
-			ar rc ${NAME} ${OBJS}
+all : $(NAME)
 
-clean:
-			${RM} ${OBJS}
+bonus : ${OBJS_BONUS}
+		@echo "Making Bonuses..."
+		ar rcs ${NAME} ${OBJS_BONUS}
 
-fclean:		clean
-			${RM} ${NAME}
+%.o : %.c
+		@echo "Creating ojects..."
+		@${CC} ${CFLAGS} -c $<
 
-re:			fclean all
+clean :
+		@echo "Cleaning binary files..."
+		@rm -f ${OBJS} ${OBJS_BONUS}
 
-.PHONY:		all clean re
+fclean : clean
+		@echo "Removing library..."
+		@rm -f libft.a
+
+re : fclean all
