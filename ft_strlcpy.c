@@ -6,7 +6,7 @@
 /*   By: welim <welim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 15:38:45 by welim             #+#    #+#             */
-/*   Updated: 2022/04/18 15:38:47 by welim            ###   ########.fr       */
+/*   Updated: 2022/04/18 15:55:35 by welim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcpy(char	*dst, const char	*src, size_t	dstsize)
 {
-	size_t srclen;
-	size_t i;
-	
+	size_t	srclen;
+	size_t	i;
+
 	srclen = ft_strlen(src);
 	i = 0;
 	if (dstsize > 0)

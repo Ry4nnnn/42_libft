@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: welim <welim@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/18 15:44:22 by welim             #+#    #+#             */
+/*   Updated: 2022/04/18 15:45:13 by welim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	intlen(long nb)
 {
-	int res;
+	int	res;
 
 	if (nb == 0)
 		return (1);
@@ -20,7 +32,7 @@ static int	intlen(long nb)
 	return (res);
 }
 
-char	*ft_itoa(int	n)
+char	*ft_itoa(int n)
 {
 	char	*res;
 	int		len;

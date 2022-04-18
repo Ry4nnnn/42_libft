@@ -6,7 +6,7 @@
 /*   By: welim <welim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 19:19:20 by welim             #+#    #+#             */
-/*   Updated: 2022/04/18 15:37:17 by welim            ###   ########.fr       */
+/*   Updated: 2022/04/18 15:47:59 by welim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*res;
-	
+
 	if (nmemb > 4294967295 || size > 4294967295)
 		return (NULL);
 	res = malloc(nmemb * size);

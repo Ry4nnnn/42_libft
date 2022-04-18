@@ -6,13 +6,13 @@
 /*   By: welim <welim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 15:39:12 by welim             #+#    #+#             */
-/*   Updated: 2022/04/18 15:39:16 by welim            ###   ########.fr       */
+/*   Updated: 2022/04/18 16:02:08 by welim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int	c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
