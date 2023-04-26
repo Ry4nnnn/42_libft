@@ -1,2 +1,2 @@
 # libft
-first ever project in 42Core Program
+Creating my very own `Library`
