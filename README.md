@@ -1,5 +1,5 @@
 # libft
-</b> A project from 42KL.</b>
+<b/> A project from 42KL.</b>
 Creating my very own `Library`
 
 ## Grade :
